@@ -1,11 +1,11 @@
 # Skripsi
 ## Sistem Deteksi Kematangan Pisang, Estimasi Masa Simpan, dan Prioritas Distribusi
 
-Proyek ini merupakan penelitian tugas akhir yang berfokus pada pengembangan sistem deteksi tingkat kematangan pisang Cavendish secara non-real-time menggunakan ESP32 dan sensor warna TCS3200. Data pengukuran warna digunakan untuk menganalisis karakteristik kematangan pisang melalui pendekatan pengolahan data dan machine learning.
+Proyek penelitian yang mengintegrasikan sensor warna dan analisis data untuk mengidentifikasi tingkat kematangan pisang Cavendish, memperkirakan masa simpan berdasarkan data pengamatan, serta menentukan prioritas distribusi menggunakan metode FEFO (First Expired, First Out).
 
-Penelitian ini juga mencakup pengolahan data pengamatan masa simpan untuk memperkirakan masa simpan pisang serta menentukan prioritas distribusi berdasarkan prinsip FEFO (*First Expired, First Out*).
+Sistem menggunakan ESP32 dan sensor warna TCS3200 untuk memperoleh data frekuensi warna RGB (fR, fG, fB). Data tersebut dianalisis untuk mengidentifikasi karakteristik warna pada empat kategori kematangan, yaitu mentah, setengah matang, matang, dan terlalu matang. Algoritma Random Forest, Support Vector Machine (SVM), dan K-Nearest Neighbors (KNN) digunakan dan dievaluasi untuk klasifikasi tingkat kematangan.
 
-Proyek menggabungkan implementasi perangkat keras, pengumpulan dan pengolahan data, evaluasi model klasifikasi, serta pemanfaatan data untuk mendukung pengambilan keputusan distribusi.
+Selain klasifikasi, data pengamatan masa simpan diolah untuk memperoleh estimasi masa simpan berdasarkan kategori kematangan dan menentukan urutan prioritas distribusi. Hasil proyek ini menghubungkan pengukuran sensor, pengolahan data, evaluasi model, dan penerapan prinsip FEFO untuk mendukung pengelolaan distribusi produk pangan.
 
 #### Tujuan
 Merancang dan mengembangkan sistem deteksi kematangan pisang non real-time menggunakan sensor warna dan metode Random Forest untuk mengklasifikasikan tingkat kematangan serta mengestimasi masa simpan dan menentukan prioritas distribusi (first-expired-first-out).
@@ -38,7 +38,7 @@ Data pengamatan masa simpan diolah berdasarkan kategori kematangan dan identitas
 Hasil estimasi masa simpan digunakan untuk mengurutkan prioritas distribusi berdasarkan prinsip FEFO (*First Expired, First Out*). Pisang dengan estimasi masa simpan lebih pendek diprioritaskan untuk didistribusikan lebih dahulu.
 
 #### Hasil 
-Proyek ini menghasilkan beberapa luaran utama:
+Proyek ini menghasilkan beberapa output:
 1. Sistem pengukuran warna pisang berbasis ESP32 dan TCS3200.
 2. Dataset frekuensi warna RGB untuk analisis kematangan.
 3. Hasil analisis karakteristik warna berdasarkan kategori kematangan.
@@ -53,6 +53,11 @@ Kinerja klasifikasi dipengaruhi oleh kemiripan karakteristik warna antarkategori
 Estimasi masa simpan didasarkan pada data pengamatan yang tersedia. Hasilnya tidak dapat dianggap sebagai jaminan masa simpan aktual untuk seluruh kondisi penyimpanan. Perubahan suhu, kelembapan, penanganan, dan kondisi lingkungan dapat memengaruhi proses pematangan pisang.
 
 #### Preview Hasil
+![Dashboard](Images/skripsi-2.png)
+![Dashboard](Images/skripsi-3.png)
+![Dashboard](Images/skripsi-4.png)
+![Dashboard](Images/skripsi-5.png)
+
 
 
 
